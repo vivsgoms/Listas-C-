@@ -2,18 +2,21 @@ using System;
 
 class MainClass {
   public static void Main (string[] args) {
-    int acertos=0,numero=0,numero2=0,x,y;
+    int acertos=0,x,y;
     string r = ("");
     
     string[] a = Console.ReadLine().Split(' ');
     string[] b = Console.ReadLine().Split(' ');
 
-    for (x=numero; x<6; x=x+1 ) 
-    for (y=numero2; y<6; y=y+1)
-   
-    if (a[x] == b[y])
+    for (x=0; x<6; x=x+1 ) {
+      for (y=0; y<6; y=y+1) {
+        if (a[x] == b[y])
         acertos = acertos + 1;
 
+      }
+     
+    }
+    
     if (acertos<3)
       r = "azar";
     if (acertos==3)
